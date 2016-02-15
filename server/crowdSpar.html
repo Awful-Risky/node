@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html ng-app="crowdSpar">
+<head>
+	<title>Wizard Spar</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.js"></script>
+	<script type="text/javascript" src="/angular-drag-and-drop-lists.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+	<script type="text/javascript" src="/script.js"></script>
+</head>
+<body ng-controller="crowdtroller">
+		
+		<!-- Filler -->
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<h1>Wizard Ranking Demonstration</h1>
+				<h3><strong>** Disclaimer</strong> : For RefactorU Purposes ONLY</h3>
+				<h5><strong>**Disclaimer</strong> : No claim to ownership on the wizard images portrayed below (Stored locally for demostration purposes)<strong>**</strong></h5>	
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-1 col-sm-1 side"></div>
+			<div class="col-xs-12">
+				<h3>Drag--> To Rank 8 Wizards</h3>	
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+		<!-- Drag From Zone -->
+			<div class="col-xs-1 col-sm-1 side"></div>
+			<div class="col-xs-5 col-sm-5 sidePaddingZero">
+				<ul dnd-list="dragFrom" class="dragFromStyle">
+				    <li ng-repeat="obj in dragFrom" 
+				        dnd-draggable="obj"
+				        dnd-moved="dragFrom.splice($index, 1)"
+				        dnd-effect-allowed="move"
+				        dnd-disable-if="dropTo.length >= 8"			        
+				        >
+				        <img class="imageChip" src="{{obj.image}}">
+				        <div class="liElementStyle rightRoundCorners">
+				        	{{obj.name}}
+				        </div>
+				    </li>
+				</ul>
+			</div>
+			<!-- Drop To Zone -->
+			<form ng-submit="onSubmit()">
+				<div class="col-xs-5 col-sm-5 sidePaddingZero">
+					<div class="text-right">
+						<ul dnd-list="dropTo" class="dropToStyle" >
+						    <li ng-repeat="obj in dropTo"
+								dnd-draggable="obj"
+						        dnd-moved="dropTo.splice($index, 1)"
+						        dnd-effect-allowed="move"				        
+						        >
+						        <div class="liElementStyle leftRoundCorners">
+						        	{{obj.name}}
+						        </div>
+						        <img class="imageChip" src="{{obj.image}}">
+						    </li>
+						     <li class="dndPlaceholder">
+	        					<div>Drop to rank <strong>Wizard</strong></div>
+	    					</li>
+						</ul>
+					</div>
+					<button class="btn btn-defualt" type="submit">Submit 8</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-1"></div>
+			<div class="col-xs-10">
+				<ol class="orderedListStyle">
+					<li ng-repeat="obj in sortedRunningTotal">
+						<img class="imageChip" src="{{obj.image}}">
+						<div class="liElementStyle">
+							{{obj.name}}
+						</div>
+					</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+		<!-- Filler -->
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 filler"></div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-1"></div>
+			<div class="col-xs-10">
+				<ul>
+					<li ng-repeat="obj in eventArray">
+						<div>
+							{{obj.submittedList}}
+						</div><hr/>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+<!-- check -->
+</html

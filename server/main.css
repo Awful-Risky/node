@@ -1,0 +1,101 @@
+
+
+/* ---------------------------------------------------------------------------------------------------------------*/
+
+.dragFromStyle {
+	
+	list-style-type: none;
+	padding-left: 0;
+	border-top-style: solid;
+	border-left-style: solid;
+	border-bottom-style: solid;
+	border-color: black;
+	border-width: 1px;
+	height: 400px;
+	overflow: scroll;
+	background: linear-gradient(to right , rgba(60,60,90,.8), rgba(100,100,100,.8), rgba(180,180,180,.9), rgba(235,235,235,.9));
+}
+
+.dropToStyle {
+	
+	list-style-type: none;
+	padding-left: 0;
+	margin-left: 0;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-color: black;
+	border-width: 1px;
+	height: 400px;
+	overflow: scroll;
+	text-align: right;
+	background: linear-gradient(to left, rgba(60,60,90,.8), rgba(100,100,100,.8), rgba(180,180,180,.9), rgba(235,235,235,.9));
+}
+.orderedListStyle {
+	margin-top: 50px;
+	min-height: 200px;
+	height: 400px;
+	overflow: auto;
+	background-image: url("backGroundWizard.png");
+	background-size: auto;
+	background-repeat: no-repeat;
+	/*background: linear-gradient(to top , rgba(60,60,90,.8), rgba(100,100,100,.8), rgba(180,180,180,.9), rgba(235,235,235,.9));*/
+}
+
+.liElementStyle {
+	width: 160px;
+	border-style: solid;
+	border-color: grey;
+	border-width: 1px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	margin-left: 4px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	background: linear-gradient(to top, rgba(150,150,200,.8), rgba(100,150,180,.7), rgba(220,220,250,.9), rgba(100,120,220,.9));
+/*    background: -webkit-linear-gradient(to top, rgba(150,200,150,.9), rgba(20,130,20,.8), rgba(220,250,200,.9));
+    background: -moz-linear-gradient(to top, rgba(150,200,150,.9), rgba(20,130,20,.8), rgba(220,250,200,.9));*/
+	text-align: center;
+	display: inline-block;	
+}
+
+
+/*.side {
+	background-color: rgba(150,150,150,.5);
+	height: 400px;
+	padding-right: 5px;
+	padding-left: 0;
+}*/
+
+
+.rightRoundCorners {
+	border-radius: 0 10px 10px 0;
+}
+.leftRoundCorners {
+	border-radius: 10px 0 0 10px;
+}
+.sidePaddingZero {
+	padding-left: 0;
+	padding-right: 0
+}
+
+
+.dndPlaceholder {
+	background-color: rgba(220,220,255,.8);
+	margin: 10px 0 10px 0;
+	border-radius: 50px 0  0 50px;
+}
+
+.imageChip {
+	height: 50px;
+	width:	50px;
+	margin: 5px 0 5px 2px;
+}
+
+.filler {
+	height: 100px;
+}
+
+/*check*/
+
+

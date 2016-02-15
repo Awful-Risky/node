@@ -1,0 +1,25 @@
+{
+  "name": "nodeapp",
+  "version": "1.0.0",
+  "description": "node1_bonusii",
+  "main": "app.js",
+  "scripts": {
+    "test": "none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Awful-Risky/node.git"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "DanLester",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Awful-Risky/node/issues"
+  },
+  "homepage": "https://github.com/Awful-Risky/node#readme",
+  "dependencies": {
+    "request": "^2.69.0"
+  }
+}
