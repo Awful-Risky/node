@@ -12,12 +12,21 @@ app.use(logger('dev'));
 // Application Configuration \\
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(__dirname + '/public'));
+// app.use(express.static(__dirname + '/public'));
 
 // Routes \\
-app.get('/', function(req, res){
-	// var fileContents = fs.readFileSync('data.txt');  Synchronous way--BAD
-	fs.readFile('data.txt', function(err, data) {
+// app.get('/', function(req, res){
+// 	// var fileContents = fs.readFileSync('data.txt');  Synchronous way--BAD
+// 	fs.readFile('data.txt', function(err, data) {
+// 		res.header('Content-Type', 'text/html');  
+// 		res.send(data);
+// 	});
+
+// });
+
+app.get('/:filename', function(req, res){
+	var input = (req.params.filename)
+	fs.readFile(input, function(err, data) {
 		res.header('Content-Type', 'text/html');  
 		res.send(data);
 	});
