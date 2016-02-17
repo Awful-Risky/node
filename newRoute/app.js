@@ -19,11 +19,12 @@ app.get('/', function(req, res){
 	res.sendFile('index.html', {root : './public/html'})
 })
 
-// app.post('/formsubmit', function(req, res){
-// 	console.log(req.body)
-
-// 	res.redirect('/users/' + req.body.username + '/' + req.body.password)
-// })
+app.post('/formsubmit', function(req, res){	
+	res.redirect('/success/')
+})
+app.get('/success', function(req, res){
+	res.send('Success')
+})
 
 // Listen for connections \\
 app.listen(3000, function(){
