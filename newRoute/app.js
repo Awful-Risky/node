@@ -15,18 +15,20 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res){
-	console.log(req.query)
-	res.sendFile('index.html', {root : './public/html'})
-})
+	console.log(req.query);
+	res.sendFile('index.html', {root : './public/html'});
+});
 
 app.post('/formsubmit', function(req, res){	
-	res.redirect('/success/')
-})
+	console.log(req.body);
+	res.redirect('/success/');
+});
+
 app.get('/success', function(req, res){
-	res.send('Success')
-})
+	res.send('Success');
+});
 
 // Listen for connections \\
 app.listen(3000, function(){
-	console.log('Server is 1Up')
-})
+	console.log('Server is 1Up');
+});
