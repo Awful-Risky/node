@@ -6,14 +6,8 @@ var destinationFile = process.argv[3];
 
 var inputCSV = fs.readFileSync(sourceFile, 'utf-8');
 
-console.log(inputCSV)
-console.log(typeof (inputCSV))
-
 var array = inputCSV.split('\n')
 array.pop()
-
-console.log(array)
-
 
 var newArray = []
 for (var i = 0; i<array.length; i++) {	
@@ -22,8 +16,14 @@ for (var i = 0; i<array.length; i++) {
 } 
 console.log('newArray: ', newArray)
 
+// function MakeObj (newArray) {
+// 	for (var i = 0; i<newArray.length; i++) {
+
+// 	}
+// }
+// var newObj = makeObj(newArray);
+// console.log(newObj);
 
 
-
-fs.writeFileSync(destinationFile, inputCSV);
+// fs.writeFileSync(destinationFile, newArray);
 
